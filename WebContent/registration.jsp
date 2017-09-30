@@ -9,8 +9,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"></link>
 </head>
 <body>
-	<article>
-	<form class="" action="registration" method="post">
+	<form class="form form-horizontal" action="registration" method="post">
 		<div class="col-md-6 form-group">
 			<label for="fname">First Name</label> <input type="text" name="fName"
 				id="fName" required>
@@ -41,6 +40,5 @@
 		</div>
 		<button type="submit" class="btn btn-primary">Register</button>
 	</form>
-	</article>
 </body>
 </html>

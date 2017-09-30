@@ -8,22 +8,41 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"></link>
 <title>Login Page</title>
 </head>
-<body>
-	<h1 class="page-header">Login Page</h1>
-	<div class="text-center">
-		<form class="text-center" action="CheckLogin" method="post">
-			<input class="form-control col-md-4" type="text" name="username"
-				placeholder="Enter Your User Name" required> <input
-				class="form-control col-md-4" type="password" name="password"
-				placeholder="Enter Your Password" required> <input
-				class="btn btn-primary" type="submit" value="login">
+<body class="container">
+	<div class="col-xs-12">
+		<h1 class="page-header">Login Page</h1>
+	</div>
+	<div class="col-xs-12">
+		<form action="CheckLogin" class="form form-horizontal">
+			<div class="form-group">
+				<div class="col-xs-12 col-sm-4">
+					<div class="input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-user"></i></span> <input id="uName"
+							type="text" class="form-control" name="username" required>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="pass" class="col-xs-12 col-sm-4 control-label">Password</label>
+				<div class="col-xs-12 col-sm-4">
+					<input id="pass" type="password" class="form-control"
+						name="password" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-xs-12">
+					<button type="submit" class="btn btn-primary pull-right">Login</button>
+				</div>
+			</div>
 		</form>
+
 		<%
 			String login_msg = "";
 			if (request.getAttribute("error") == null) {
 				login_msg = "reload";
 			} else {
-				login_msg=(String)request.getAttribute("error");
+				login_msg = (String) request.getAttribute("error");
 				out.println("<font color=red size=4px>" + login_msg + "</font>");
 			}
 		%>
